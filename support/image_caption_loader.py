@@ -22,7 +22,7 @@ def load_image_and_text(image_width , image_height , images_path , texts_path):
             cap_file = open(file_path , 'rt')
             for i in range(10):
                 cap.insert(i , cap_file.readline())
-            texts[name] = cap[random.randint(0,9)]
+            texts[name] = cap[0]
 
     for name , img_path in images.items():
         if name in texts:
