@@ -25,7 +25,7 @@ def main():
     gan.glove_path = './glove'
 
     batch_size = 20
-    epoch = 1
+    epoch = 10000
 
     gan.fit(image_caption_pair , epoch , batch_size , './output/intermediate_output' , 50 , weights_path)
 
