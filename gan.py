@@ -165,8 +165,8 @@ class Gan(object):
                     print("Epoch %d batch %d g_loss : %f" % (epoch, batch_index, g_loss))
                     self.save_intermediate_result(generated_images, snapshot_dir_path=snapshot_dir_path,
                                         epoch=epoch, batch_index=batch_index)
-                    self.generator.save_weights('./weights/gen.h5', True)
-                    self.discriminator.save_weights('./weights/disc.h5' , True)
+                    self.generator.save_weights('./weights/gen'+ str(epoch) +'.h5', True)
+                    self.discriminator.save_weights('./weights/disc'+ str(epoch) +'.h5' , True)
 
         self.generator.save_weights('./weights/gen.h5', True)
         self.discriminator.save_weights('./weights/disc.h5' , True)
